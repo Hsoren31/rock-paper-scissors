@@ -12,28 +12,19 @@ let playerSelection = prompt ("Rock, Paper or Scissors?",'');
 
 console.log(playerSelection)
 
-let getComputerChoice = Math.random()
-    if (getComputerChoice > 0.33){
-        getComputerChoice = "Rock";
-    } else if (getComputerChoice >= 0.67){
-        getComputerChoice = "Paper";
-    } else {
-        getComputerChoice = "Scissors";
-    }
-
-
-console.log (getComputerChoice);
-
-let computerSelection = getComputerChoice;
-
-function playRound(playerSelection, computerSelection){
-    if (playerSelection("")> computerSelection("")) {
-        return "You won!";
-    } else
-        (playerSelection("") < computerSelection("")); {
-        return "You lost.";
-    }
+function getComputerChoice() {
+    return Math.random();
 }
 
+getComputerChoice();
 
-console.log(playRound)
+let computerSelection = getComputerChoice();
+    if (getComputerChoice() < 0.33) {
+        computerSelection = "Rock";
+    } else if (getComputerChoice() <= 0.66) {
+        computerSelection = "Paper";
+    } else {
+        computerSelection = "Scissors"
+    }
+
+console.log (computerSelection);
