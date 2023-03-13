@@ -19,14 +19,6 @@ function game() {
 
     getComputerChoice();
 
-    let computerSelection = getComputerChoice();
-        if (getComputerChoice() < 0.33) {
-            computerSelection = "Rock";
-        } else if (getComputerChoice() <= 0.66) {
-            computerSelection = "Paper";
-        } else {
-            computerSelection = "Scissors";
-        }
 
     function playRound(playerSelection, computerSelection) {
         if (playerSelection == "Rock" && computerSelection == "Scissors" || playerSelection == "Scissors" && computerSelection == "Paper" || playerSelection == "Paper" && computerSelection == "Rock"){
